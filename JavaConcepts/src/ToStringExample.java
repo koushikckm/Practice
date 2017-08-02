@@ -26,4 +26,5 @@ public class ToStringExample {
 		//Without toString() method it would print hashcode 
 		System.out.println(t);
 	}
+	
 }
