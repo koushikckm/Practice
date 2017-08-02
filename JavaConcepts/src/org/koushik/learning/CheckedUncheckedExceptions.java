@@ -1,3 +1,4 @@
+package org.koushik.learning;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -22,7 +23,7 @@ public class CheckedUncheckedExceptions {
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		} 
 		
 		
 		/*Runtime Exceptions - Unchecked exceptions - occur at runtime

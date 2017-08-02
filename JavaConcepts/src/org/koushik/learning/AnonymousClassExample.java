@@ -1,3 +1,5 @@
+package org.koushik.learning;
+
 class Machine
 {
 	public void start()
