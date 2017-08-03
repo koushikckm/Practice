@@ -10,8 +10,13 @@ public class CheckedUncheckedExceptions {
 		
 		/*Checked Exceptions - You are forced to handle it
 			Ex : FileNotFound
+			ClassNotFoundException
+			IOException
+			SQLException
+			InvocationTargetException
 		 */
 		
+		//FileNotFoundException 
 		File file = new File("test.txt");
 		
 		try {
@@ -25,12 +30,19 @@ public class CheckedUncheckedExceptions {
 			e.printStackTrace();
 		} 
 		
+		//ClassNotFoundException 
+		try {
+			Class loadedClass = Class.forName("some java class like java.io");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		/*Runtime Exceptions - Unchecked exceptions - occur at runtime
 		 * No need to handle
 		 * Basically they are fundamental errors in program
 		 * Ex : ArrayIndexOutOfBound
-		 * ullPointerException
+		 * NullPointerException
 		 */
 		 
 		/*int a[] = {1,2,3,4,5};

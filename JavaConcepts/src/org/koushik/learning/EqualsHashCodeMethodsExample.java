@@ -40,7 +40,7 @@ class Person
 	}
 }
 
-public class EqualsMethodExample {
+public class EqualsHashCodeMethodsExample {
 
 	public static void main(String args[])
 	{
