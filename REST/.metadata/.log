@@ -1,0 +1,231 @@
+!SESSION 2017-08-08 09:44:22.993 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/koushiksudheendra/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/koushiksudheendra/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-08-08 09:44:50.534
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2017-08-08 10:12:27.893
+!MESSAGE Can't resolve Archetype org.glassfish.jersy.archtypes:jersy-quickstart-webapp:2.25
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.glassfish.jersy.archtypes:jersy-quickstart-webapp:pom:2.25
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:776)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:743)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:720)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardArchetypePage$17.run(MavenProjectWizardArchetypePage.java:830)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Missing org.glassfish.jersy.archtypes:jersy-quickstart-webapp:pom:2.25
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2017-08-08 10:12:27.895
+!MESSAGE Could not resolve artifact org.glassfish.jersy.archtypes:jersy-quickstart-webapp:pom:2.25
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2017-08-08 10:12:27.895
+!MESSAGE Missing org.glassfish.jersy.archtypes:jersy-quickstart-webapp:pom:2.25
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2017-08-08 10:13:17.026
+!MESSAGE Can't resolve Archetype org.glassfish.jersy.archtypes:jersy-quickstart-webapp:2.25.1
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.glassfish.jersy.archtypes:jersy-quickstart-webapp:pom:2.25.1
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:776)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:743)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:720)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardArchetypePage$17.run(MavenProjectWizardArchetypePage.java:830)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Missing org.glassfish.jersy.archtypes:jersy-quickstart-webapp:pom:2.25.1
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2017-08-08 10:13:17.027
+!MESSAGE Could not resolve artifact org.glassfish.jersy.archtypes:jersy-quickstart-webapp:pom:2.25.1
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2017-08-08 10:13:17.027
+!MESSAGE Missing org.glassfish.jersy.archtypes:jersy-quickstart-webapp:pom:2.25.1
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2017-08-08 10:13:40.449
+!MESSAGE Can't resolve Archetype org.glassfish.jersy.archtypes:jersy-quickstart-webapp:2.16
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.glassfish.jersy.archtypes:jersy-quickstart-webapp:pom:2.16
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:776)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:743)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:720)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardArchetypePage$17.run(MavenProjectWizardArchetypePage.java:830)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Missing org.glassfish.jersy.archtypes:jersy-quickstart-webapp:pom:2.16
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2017-08-08 10:13:40.449
+!MESSAGE Could not resolve artifact org.glassfish.jersy.archtypes:jersy-quickstart-webapp:pom:2.16
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2017-08-08 10:13:40.449
+!MESSAGE Missing org.glassfish.jersy.archtypes:jersy-quickstart-webapp:pom:2.16
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2017-08-08 10:14:33.932
+!MESSAGE Can't resolve Archetype org.glassfish.jersy.archetypes:jersy-quickstart-webapp:2.25.1
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.25.1
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:776)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:743)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:720)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardArchetypePage$17.run(MavenProjectWizardArchetypePage.java:830)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Missing org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.25.1
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2017-08-08 10:14:33.932
+!MESSAGE Could not resolve artifact org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.25.1
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2017-08-08 10:14:33.932
+!MESSAGE Missing org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.25.1
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2017-08-08 10:15:05.970
+!MESSAGE Can't resolve Archetype org.glassfish.jersy.archetypes:jersy-quickstart-webapp:2.25
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.25
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:776)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:743)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:720)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardArchetypePage$17.run(MavenProjectWizardArchetypePage.java:830)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Missing org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.25
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2017-08-08 10:15:05.970
+!MESSAGE Could not resolve artifact org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.25
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2017-08-08 10:15:05.970
+!MESSAGE Missing org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.25
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2017-08-08 10:15:26.125
+!MESSAGE Can't resolve Archetype org.glassfish.jersy.archetypes:jersy-quickstart-webapp:2.16
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.16
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:776)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:743)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:720)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardArchetypePage$17.run(MavenProjectWizardArchetypePage.java:830)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Missing org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.16
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2017-08-08 10:15:26.125
+!MESSAGE Could not resolve artifact org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.16
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2017-08-08 10:15:26.126
+!MESSAGE Missing org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.16
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2017-08-08 10:16:01.864
+!MESSAGE Can't resolve Archetype org.glassfish.jersy.archetypes:jersy-quickstart-webapp:2.x
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.x
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:776)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:743)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:720)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardArchetypePage$17.run(MavenProjectWizardArchetypePage.java:830)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Missing org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.x
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2017-08-08 10:16:01.864
+!MESSAGE Could not resolve artifact org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.x
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2017-08-08 10:16:01.864
+!MESSAGE Missing org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.x
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2017-08-08 10:25:34.947
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2017-08-08 10:25:34.949
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-08-08 11:19:04.520
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-08-08 11:19:04.552
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2017-08-08 11:34:53.233 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -keyring /Users/koushiksudheendra/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -data file:/Users/koushiksudheendra/Desktop/Learning/workspace/Practice/REST/ -product org.eclipse.epp.package.jee.product -keyring /Users/koushiksudheendra/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-08-08 11:35:15.999
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2017-08-08 11:36:35.717
+!MESSAGE Can't resolve Archetype org.glassfish.jersy.archetypes:jersy-quickstart-webapp:2.16
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.16
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:776)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:743)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:720)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardArchetypePage$17.run(MavenProjectWizardArchetypePage.java:830)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Missing org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.16
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2017-08-08 11:36:35.720
+!MESSAGE Could not resolve artifact org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.16
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2017-08-08 11:36:35.720
+!MESSAGE Missing org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.16
+!SESSION 2017-08-08 11:39:24.844 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/koushiksudheendra/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/koushiksudheendra/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-08-08 11:39:42.472
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2017-08-08 11:40:43.500
+!MESSAGE Can't resolve Archetype org.glassfish.jersy.archetypes:jersy-quickstart-webapp:2.21
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.21
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:776)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:743)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:720)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardArchetypePage$17.run(MavenProjectWizardArchetypePage.java:830)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Missing org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.21
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2017-08-08 11:40:43.503
+!MESSAGE Could not resolve artifact org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.21
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2017-08-08 11:40:43.503
+!MESSAGE Missing org.glassfish.jersy.archetypes:jersy-quickstart-webapp:pom:2.21
+
+!ENTRY org.eclipse.jface.text 2 0 2017-08-08 11:44:03.068
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-08-08 11:44:03.070
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-08-08 12:12:30.970
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-08-08 12:12:30.972
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-08-08 12:12:31.168
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-08-08 12:12:31.169
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

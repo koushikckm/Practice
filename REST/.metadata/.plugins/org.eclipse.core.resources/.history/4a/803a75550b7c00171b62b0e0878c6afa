@@ -1,0 +1,7 @@
+package org.koushik.practice.test.database;
+
+public class DatabaseClient {
+
+	private static Map<Long ,Message> messages = new HashMap<>();
+	
+}

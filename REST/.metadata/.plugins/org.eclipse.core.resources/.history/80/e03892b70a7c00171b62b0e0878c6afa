@@ -1,0 +1,5 @@
+package org.koushik.practice.test.model;
+
+public class Profile {
+
+}

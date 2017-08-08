@@ -1,0 +1,5 @@
+package org.koushik.practice.test.database;
+
+public class DatabaseClient {
+
+}

@@ -1,0 +1,32 @@
+package org.koushik.practice.test.controller;
+
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import org.koushik.practice.test.model.Message;
+import org.koushik.practice.test.service.MessageService;
+
+@Path("messages")
+public class MessageController {
+
+	MessageService messageService = new MessageService();
+	
+	@GET
+	@Produces(MediaType.APPLICATION_XML)
+	public List<Message> getMessages(){
+		return messageService.getAllMessages();
+	}
+	
+	@GET
+	@Path("/{messageId}")
+	@Produces(MediaType.APPLICATION_XML)
+	public String getMessage(@PathParam("messageId") String messageId){
+		//return messageService.getMessage(messageId);
+		return "test "+messageId;
+	}
+}
