@@ -1,0 +1,20 @@
+package org.koushik.practice.test.controller;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+
+@Path("/")
+public class CommentsController {
+
+	@GET
+	public String testSubResource(){
+		return "new sub resource";
+	}
+	
+	@GET
+	@Path("/{commentId}")
+	public String testSubResource1(@PathParam("commentId") long commentId, @PathParam("messageId") long messageId ){
+		return "Another sub resource";
+	}
+}

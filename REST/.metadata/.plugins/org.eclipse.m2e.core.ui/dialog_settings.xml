@@ -44,16 +44,19 @@
 	</section>
 	<section name="org.eclipse.m2e.core.ui.internal.wizards.CustomArchetypeDialog">
 		<list key="archetypeVersion">
-			<item value="2.16"/>
-			<item value="2.x"/>
 			<item value="2.25"/>
+			<item value="2.16"/>
+			<item value="2.21"/>
+			<item value="2.x"/>
 			<item value="2.25.1"/>
 		</list>
 		<list key="archetypeGroupId">
+			<item value="org.glassfish.jersey.archetypes"/>
 			<item value="org.glassfish.jersy.archetypes"/>
 			<item value="org.glassfish.jersy.archtypes"/>
 		</list>
 		<list key="archetypeArtifactId">
+			<item value="jersey-quickstart-webapp"/>
 			<item value="jersy-quickstart-webapp"/>
 		</list>
 		<list key="repositoryUrl">
@@ -79,10 +82,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="org.koushik.practice.test"/>
 		</list>
 		<list key="groupId">
+			<item value="org.koushik.practice"/>
 		</list>
 		<list key="artifactId">
+			<item value="test"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
