@@ -75,8 +75,6 @@ public class MessageController {
 	public Response addMessage(Message message, @Context UriInfo uriInfo) throws URISyntaxException{
 		/*
 		 * Returning response code using Response class
-		 * 
-		 * Sending status code and location value in the header of response
 		 */
 		Message newMessage = messageService.addMessage(message);
 		

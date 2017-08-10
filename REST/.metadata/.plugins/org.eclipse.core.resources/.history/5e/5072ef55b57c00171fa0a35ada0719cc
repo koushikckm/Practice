@@ -1,7 +1,5 @@
 package org.koushik.practice.test.controller;
 
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.List;
 
 import javax.ws.rs.BeanParam;
@@ -14,10 +12,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriInfo;
 
 import org.koushik.practice.test.model.Message;
 import org.koushik.practice.test.model.MessageFilterBean;
@@ -72,21 +67,8 @@ public class MessageController {
 	}
 	
 	@POST
-	public Response addMessage(Message message, @Context UriInfo uriInfo) throws URISyntaxException{
-		/*
-		 * Returning response code using Response class
-		 * 
-		 * Sending status code and location value in the header of response
-		 */
-		Message newMessage = messageService.addMessage(message);
-		
-		String newId = String.valueOf(newMessage.getId());
-		URI uri = uriInfo.getAbsolutePathBuilder().path(newId).build();
-		
-		return Response.created(uri)
-				.entity(newMessage)
-				.build();
-				
+	public Message addMessage(Message message){
+		return messageService.addMessage(message);
 	}
 	
 	@PUT

@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.koushik.practice.test.database.DatabaseClient;
-import org.koushik.practice.test.exception.DataNotFoundException;
 import org.koushik.practice.test.model.Message;
 
 public class MessageService {
@@ -44,13 +43,7 @@ public class MessageService {
 	
 	
 	public Message getMessage(long messageId){
-		Message message = messages.get(messageId);
-		if(message == null){
-			throw new DataNotFoundException("Message with id : "+messageId+" not found");
-		}
-		
-		return message;
-		
+		return messages.get(messageId);
 	}
 	
 	public Message addMessage(Message message){
