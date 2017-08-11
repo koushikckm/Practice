@@ -5,8 +5,6 @@
 <fullyQualifiedTypeName name="org.koushik.practice.test.service.MessageService"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.ws.rs.Produces"/>
-<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
-<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlRootElement"/>
 <fullyQualifiedTypeName name="org.koushik.practice.test.model.Message"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="org.koushik.practice.test.database.DatabaseClient"/>
@@ -20,6 +18,27 @@
 <fullyQualifiedTypeName name="org.koushik.practice.test.service.ProfileService"/>
 <fullyQualifiedTypeName name="org.koushik.practice.test.model.Profile"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="javax.ws.rs.MatrixParam"/>
+<fullyQualifiedTypeName name="javax.ws.rs.HeaderParam"/>
+<fullyQualifiedTypeName name="javax.ws.rs.CookieParam"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.UriInfo"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.Context"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.HttpHeaders"/>
 <fullyQualifiedTypeName name="javax.ws.rs.QueryParam"/>
+<fullyQualifiedTypeName name="javax.ws.rs.BeanParam"/>
+<fullyQualifiedTypeName name="org.koushik.practice.test.model.MessageFilterBean"/>
+<fullyQualifiedTypeName name="org.koushik.practice.test.controller.CommentsController"/>
+<fullyQualifiedTypeName name="java.net.URI"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlRootElement"/>
+<fullyQualifiedTypeName name="org.koushik.practice.test.exception.DataNotFoundException"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.Response"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.Response.Status"/>
+<fullyQualifiedTypeName name="org.koushik.practice.test.model.ErrorMessage"/>
+<fullyQualifiedTypeName name="javax.ws.rs.ext.ExceptionMapper"/>
+<fullyQualifiedTypeName name="javax.ws.rs.ext.Provider"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
 <fullyQualifiedTypeName name="javax.ws.rs.GET"/>
 </qualifiedTypeNameHistroy>

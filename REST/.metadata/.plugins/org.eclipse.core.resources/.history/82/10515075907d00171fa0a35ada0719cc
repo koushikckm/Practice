@@ -1,0 +1,12 @@
+package org.koushik.practice.rest;
+
+import javax.ws.rs.Path;
+
+@Path("test")
+public class MyResource {
+
+	@GET
+	public String getMethod(){
+		return "Hi Rest!!!";
+	}
+}

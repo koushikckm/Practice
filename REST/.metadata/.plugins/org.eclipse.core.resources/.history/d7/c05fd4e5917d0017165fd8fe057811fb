@@ -1,0 +1,11 @@
+package org.koushik.practice.rest;
+
+
+@Path("test")
+public class MyResource {
+
+	@GET
+	public String getMethod(){
+		return "Hi Rest!!!";
+	}
+}
