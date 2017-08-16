@@ -6,12 +6,22 @@
     
 <struts>
 
-	<package name="default" namespace="/tutorial" extends="struts-default">
-		<action name="getTutorial" class="org.koushik.struts2.action.Struts2Starter">
+	<package name="default" namespace="/tutorials" extends="struts-default">
+		<action name="welcome" class="org.koushik.struts2.action.Struts2Starter">
+			<result name="success">/welcome.jsp</result>
+			<result name="failure">/error.jsp</result>	
+		</action>
+		
+		<action name="getTutorial" class="org.koushik.struts2.action.TutorialAction">
 			<result name="success">/success.jsp</result>
-			<result name="failure">/error.jsp</result>
-			
+			<result name="failure">/error.jsp</result>	
 		</action>
 	</package>
 	
+	<package name="login" namespace="/" extends="struts-default">
+		<action name="login" class="org.koushik.struts2.action.LoginAction">
+			<result name="success">/searchForm.jsp</result>
+			<result name="failure">/login.jsp</result>	
+		</action>
+	</package>
 </struts>

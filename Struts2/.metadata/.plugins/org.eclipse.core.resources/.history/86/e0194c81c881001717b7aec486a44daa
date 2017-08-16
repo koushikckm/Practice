@@ -1,0 +1,7 @@
+package org.koushik.struts2.action;
+
+public class TutorialAction {
+public String execute(){
+	return "";
+}
+}
