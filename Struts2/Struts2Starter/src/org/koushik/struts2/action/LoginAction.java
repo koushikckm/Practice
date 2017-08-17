@@ -1,36 +1,49 @@
 package org.koushik.struts2.action;
 
-public class LoginAction {
+import org.apache.commons.lang.StringUtils;
+import org.koushik.struts2.model.User;
+import org.koushik.struts2.service.LoginService;
 
-	private String userId;
-	private String password;
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+
+public class LoginAction extends ActionSupport implements  ModelDriven<User>{
+
+	private User user = new User(); 
 	
-	
-	public String getUserId() {
-		return userId;
+	public void validate(){
+		
+		if(StringUtils.isEmpty(user.getUserId())){
+			
+			addFieldError("userId","User id cannot be blank");
+		}
+		
+		if(StringUtils.isEmpty(user.getPassword())){
+			
+			addFieldError("password","Password cannot be blank");
+		}
 	}
-
-
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-
-
-	public String getPassword() {
-		return password;
-	}
-
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-
 	public String execute(){
 		
-		if(getUserId().equals("userId") && getPassword().equals("password")){
-			return "success";
+		LoginService loginService = new LoginService();
+		
+		if(loginService.verifyLogin(user)){
+			return SUCCESS;
 		}
-		return "failure";
+		return LOGIN;
 	}
+	
+	public User getUser() {
+		return user;
+	}
+	
+	public void setUser(User user) {
+		this.user = user;
+	}
+	@Override
+	public User getModel() {
+		// TODO Auto-generated method stub
+		return user;
+	}
+	
 }

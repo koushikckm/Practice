@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+    
+<struts>
+
+	<!-- Icluding other xml file -->
+	<include file="login.xml"></include>
+	
+	<package name="default" namespace="/tutorials" extends="struts-default">
+		<action name="welcome" class="org.koushik.struts2.action.Struts2Starter">
+			<result name="success">/welcome.jsp</result>
+			<result name="failure">/error.jsp</result>	
+		</action>
+		
+		<action name="getTutorial" class="org.koushik.struts2.action.TutorialAction" method="getTutorial">
+			<result name="success">/success.jsp</result>
+			<result name="failure">/error.jsp</result>	
+		</action>
+		
+		<action name="addTutorial" class="org.koushik.struts2.action.TutorialAction" method="addTutorial">
+			<result name="success">/success.jsp</result>
+			<result name="failure">/error.jsp</result>	
+		</action>
+	</package>
+	
+	<package name="search" namespace="/" extends="struts-default">
+		<!-- Here class attribute is removed, this always redirects to searchForm.jsp -->
+		<action name="searchForm" >
+			<result>/searchForm.jsp</result>
+		</action>
+	</package>
+</struts>
