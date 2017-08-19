@@ -1,0 +1,5 @@
+package org.koushik.hibernate;
+
+public class HibernateTest {
+
+}

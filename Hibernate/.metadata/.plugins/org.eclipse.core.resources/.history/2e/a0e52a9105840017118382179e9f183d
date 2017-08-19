@@ -1,0 +1,22 @@
+package org.koushik.hibernate.dto;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		Test t = new Test();
+		int num = t.test();
+	}
+	
+	public int test(){
+
+		try{
+			return 1;
+		} catch(Exception e){
+			return 2;
+		} finally {
+			return 3;
+		}
+	}
+
+}

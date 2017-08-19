@@ -1,0 +1,28 @@
+package org.koushik.hibernate;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+import org.koushik.hibernate.dto.UserDetails;
+
+public class HibernateTest {
+
+	public static void main(String[] args) {
+		UserDetails userDetails = new UserDetails();
+		userDetails.setUserId(4);
+		userDetails.setUserName(" user");
+		
+		/*
+		 * 1. Create session factory
+		 * 2. Create a session from session factory
+		 * 3. Use the session to save model object
+		 */
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		
+		session.save(userDetails);
+		
+		session.getTransaction().commit();
+	}
+}

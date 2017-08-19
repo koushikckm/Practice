@@ -14,5 +14,10 @@
 			<type>2</type>
 			<location>/Users/koushiksudheendra/Documents/Softwares/struts-2.3.33/src</location>
 		</link>
+		<link>
+			<name>.link1</name>
+			<type>2</type>
+			<location>/Users/koushiksudheendra/Documents/Softwares/struts-2.3.33/lib</location>
+		</link>
 	</linkedResources>
 </projectDescription>

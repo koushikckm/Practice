@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.koushik.struts2.service.TutorialFinderService"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.Action"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
+<fullyQualifiedTypeName name="org.apache.commons.lang.StringUtils"/>
+<fullyQualifiedTypeName name="org.koushik.struts2.model.User"/>
+<fullyQualifiedTypeName name="org.koushik.struts2.service.LoginService"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ModelDriven"/>
+</qualifiedTypeNameHistroy>
