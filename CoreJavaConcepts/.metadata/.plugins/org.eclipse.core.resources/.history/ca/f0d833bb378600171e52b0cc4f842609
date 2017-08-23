@@ -1,0 +1,43 @@
+package org.koushik.learning.trickyprograms;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class FirstNonRepeatedCharacter {
+
+	public static void main(String[] args) {
+		
+		String s = "aabcdef";
+		String[] str = new String[s.length()];
+		
+		for(int i=0;i<s.length();i++){
+			str[i]=s.substring(i,i+1);
+		}
+		
+		System.out.println("String is : "+s);
+		
+		//Add one by one to key of map
+		Map<String,String> map = new HashMap<String,String>();
+		
+		
+		for(int i=0;i<str.length;i++){
+			String currChar = str[i];
+			boolean flag = false;
+			for(int j=i+1;j<str.length;j++){
+				//If it encounters end of srray
+				if(j==str.length){
+					
+				}
+			
+				if(currChar.equals(str[j])){
+					flag = true;
+					break;
+				}
+			}
+			if(!flag){
+				System.out.println("First non repeating char is : "+currChar);
+				break;
+			}
+		}
+	}
+}

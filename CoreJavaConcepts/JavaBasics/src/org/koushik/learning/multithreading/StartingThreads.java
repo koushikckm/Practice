@@ -4,23 +4,23 @@ public class StartingThreads {
 
 	public static void main(String[] args) {
 		
-		/*Test t1 = new Test();
-		Test t2 = new Test();
-
-		t1.start();
-		t2.start();*/
-		
-		
-		Thread t1 = new Thread(new Test());
-		Thread t2 = new Thread(new Test());
+		TestThreadByExtendingThread t1 = new TestThreadByExtendingThread();
+		TestThreadByExtendingThread t2 = new TestThreadByExtendingThread();
 
 		t1.start();
 		t2.start();
+		
+		
+		/*Thread t1 = new Thread(new TestThreadByImplRunnable());
+		Thread t2 = new Thread(new TestThreadByImplRunnable());
+
+		t1.start();
+		t2.start();*/
 	}
 }
 
 //By Extending Thread Class
-/*class Test extends Thread
+class TestThreadByExtendingThread extends Thread
 {
 	@Override
 	public void run()
@@ -36,10 +36,10 @@ public class StartingThreads {
 			}
 		}
 	}
-}*/
+}
 
 //By implementing runnable interface
-class Test implements Runnable
+class TestThreadByImplRunnable implements Runnable
 {
 
 	@Override

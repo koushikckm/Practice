@@ -1,0 +1,11 @@
+package org.koushik.learning.collections;
+
+public class SynchronizedMapDemo {
+
+	/*
+	 * 
+	 * The synchronizedMap() method is used to return a synchronized 
+	 * (thread-safe) map backed by the specified map.
+	 * 
+	 */
+}

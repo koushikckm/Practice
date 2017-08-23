@@ -1,0 +1,15 @@
+package org.koushik.learning.trickyprograms;
+
+public class MaxDiffofTwoEleInArrayPuzzle {
+
+	public static void main(String[] args) {
+		int a[] = {3,6,11,2,14,1};
+		int maxDiff = findMaxDiff(a);
+		
+		System.out.println("Max diff : "+maxDiff);
+	}
+	public static int findMaxDiff(int a[]){
+		
+		return 1;
+	}
+}

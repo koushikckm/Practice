@@ -1,0 +1,31 @@
+package org.koushik.learning.trickyprograms;
+
+public class FirstNonRepeatedCharacter {
+
+	public static void main(String[] args) {
+		
+		String s = "koushik";
+		String[] str = new String[s.length()];
+		
+		for(int i=0;i<s.length();i++){
+			str[i]=s.substring(i,i+1);
+		}
+		
+		System.out.println("String is : "+s);
+		
+		for(int i=0;i<str.length;i++){
+			String currChar = str[i];
+			boolean flag = false;
+			for(int j=i+1;j<str.length;j++){
+				if(currChar.equals(str[j])){
+					flag = true;
+					break;
+				}
+			}
+			if(!flag){
+				System.out.println("First non repeating char is : "+currChar);
+				break;
+			}
+		}
+	}
+}

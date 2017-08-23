@@ -1,0 +1,5 @@
+package org.koushik.learning.trickyprograms;
+
+public class FirstNonRepeatedCharacter {
+
+}

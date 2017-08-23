@@ -1,0 +1,43 @@
+package org.koushik.learning.collections;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.Iterator;
+
+public class HashMapAfterSynchronizingDemo {
+	public static void main(String args[]) {
+		HashMap<String, String> hmap = new HashMap<String, String>();
+		hmap.put("1", "Anil");
+		hmap.put("2", "Ajit");
+		hmap.put("3", "Brad");
+		hmap.put("4", "Sachin");
+		hmap.put("5", "XYZ");
+
+		//Map map = Collections.synchronizedMap(hmap);
+
+/*		synchronized (map) {
+			Iterator<String> it = map.keySet().iterator();
+
+			while (it.hasNext()) {
+				String key = it.next();
+				if (key.equals("3"))
+					map.put(key + "new", "new3");
+			}
+		}
+		System.out.println("HashMap after iterator: " + map);
+*/
+         
+         Set set = hmap.entrySet();
+         synchronized(hmap){
+             Iterator i = set.iterator();
+             // Display elements
+             while(i.hasNext()) {
+                Map.Entry me = (Map.Entry)i.next();
+                System.out.print(me.getKey() + ": ");
+                System.out.println(me.getValue());
+             }
+         }
+    }
+}

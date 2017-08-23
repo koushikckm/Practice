@@ -13,6 +13,7 @@ interface Plant
 	public void grow();
 }
 
+
 public class AnonymousClassExample {
 
 	public static void main(String args[])
@@ -34,5 +35,6 @@ public class AnonymousClassExample {
 			}
 		};
 		p.grow();
+		
 	}
 }

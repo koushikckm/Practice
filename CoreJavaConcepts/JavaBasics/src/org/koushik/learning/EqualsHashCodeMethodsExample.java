@@ -11,12 +11,17 @@ class Person
 		this.name = name;
 	}
 	
+	
 	@Override
 	public String toString()
 	{
 		return "ID : "+id+" Name : "+name;
 	}
 
+	/*
+	 * hashCode() method defines rules how the hashing technique has to applied
+	 */
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -25,6 +30,11 @@ class Person
 		return result;
 	}
 
+	/*
+	 * If you are comparing objects and
+	 *  if you want to define on what basis objects have to be compared
+	 * 
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -48,6 +58,7 @@ public class EqualsHashCodeMethodsExample {
 		Person p2 = new Person(2,"hello2");
 		Person p3 = new Person(1,"hello3");
 		
+		System.out.println(p1);
 		System.out.println(p1==p2);
 		System.out.println(p1==p3);
 		System.out.println(p1.equals(p2));
