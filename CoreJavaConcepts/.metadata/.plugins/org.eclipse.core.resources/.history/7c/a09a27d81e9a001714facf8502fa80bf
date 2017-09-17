@@ -1,0 +1,36 @@
+package org.koushik.learning;
+
+public class Test extends A{
+
+	public static void main(String[] args) {
+		A a = new Test();
+		
+		a.meth();
+		a.meth1();
+		
+		A b;
+		b.meth1();
+	}
+
+	void meth(){
+		System.out.println("meth in B");
+	}
+	
+	@Override
+	void meth1() {
+		// TODO Auto-generated method stub
+		super.meth();
+		System.out.println("meth1...");
+
+	}
+}
+
+abstract class A{
+	
+	void meth(){
+		
+		System.out.println("meth in A");
+	}
+	
+	abstract void meth1();
+}

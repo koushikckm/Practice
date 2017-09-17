@@ -6,6 +6,11 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/*
+ * 
+ * 	Comparator provides multiple sorting sequence. In other words, we can sort the collection on the basis of multiple elements such as id, name and price etc.
+ *
+ */
 public class SortingListsExample {
 
 	public static void main(String[] args) {

@@ -15,20 +15,28 @@ public class HibernateTest {
 	public static void main(String[] args) {
 		UserDetails userDetails = new UserDetails();
 		userDetails.setUserId(1);
-		userDetails.setUserName("user");
+		userDetails.setUserName("First user");
 		userDetails.setJoinDate(new Date());
-		userDetails.setDescription("descr");
+		userDetails.setDescription("Description is here....");
+	
+		Address homeAddr = new Address();
+		homeAddr.setStreet("Home Street 111");
+		homeAddr.setCity("bangalore");
+		homeAddr.setState("KA");
+		homeAddr.setPin("1111");
 		
-		Address addr = new Address();
-		addr.setStreet("111");
-		addr.setCity("bagalore");
-		addr.setState("KA");
-		addr.setPin("1111");
+		userDetails.setHomeAddress(homeAddr);
 		
-		userDetails.setAddress(addr);
+		Address officeAddr = new Address();
+		officeAddr.setStreet("Office Street 111");
+		officeAddr.setCity("Delhi");
+		officeAddr.setState("DL");
+		officeAddr.setPin("2222");
+		
+		userDetails.setOfficeAddress(officeAddr);
 		
 		
-		Vehicle vehicle1 = new Vehicle();
+		/*Vehicle vehicle1 = new Vehicle();
 		vehicle1.setVin("1111");
 		vehicle1.setModel("aaaa");
 		
@@ -44,7 +52,7 @@ public class HibernateTest {
 		account.setAccountId("111");
 		account.setAccountName("koushik");
 		
-		userDetails.setAccount(account);
+		userDetails.setAccount(account);*/
 		
 		/*
 		 * 1. Create session factory
@@ -54,21 +62,22 @@ public class HibernateTest {
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
-		
 		session.save(userDetails);
-		session.save(account);
+		//session.save(account);
 		session.getTransaction().commit();
 		session.close();
 		
-		/*userDetails = null;
+		userDetails = null;
 		
+		//Retrieving from db using hibernate
+		 
 		session = sessionFactory.openSession();
 		session.beginTransaction();
 		
 		//have to pass primary key as second argument for session.get
-		userDetails = (UserDetails) session.get(UserDetails.class, 3);
+		userDetails = (UserDetails) session.get(UserDetails.class, 1);
 		System.out.println("User name : "+userDetails.getUserName()
-							+" Address : "+userDetails.getAddress());*/
+							+" Description : "+userDetails.getDescription());
 		
 		
 		

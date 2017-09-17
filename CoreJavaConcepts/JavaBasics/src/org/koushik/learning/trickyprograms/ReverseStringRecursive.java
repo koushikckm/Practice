@@ -20,7 +20,7 @@ public class ReverseStringRecursive {
     public static void main(String[] args) 
     {
     	ReverseStringRecursive reverseString = new ReverseStringRecursive();
-        String str = "abc abc";
+        String str = "abcde";
         System.out.println("Reverse of "+str+" is "+reverseString.reverseString(str));    
     }    
 }

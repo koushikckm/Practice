@@ -1,9 +1,13 @@
 package org.koushik.hibernate.dto;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Embedded;
@@ -16,6 +20,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 import org.hibernate.annotations.CollectionId;
 import org.hibernate.annotations.GenericGenerator;
@@ -23,27 +28,45 @@ import org.hibernate.annotations.Type;
 
 @Entity
 @Table(name="USER_DETAILS")
-public class UserDetails {
+public class UserDetails{
 
-	@Id 
-	@Column(name="user_id")
+	@Id //@GeneratedValue(strategy=GenerationType.TABLE)
+	//@Column(name="USER_ID")
 	private int userId;
 	
-	@Column(name="user_name")
+	//@Column(name="USER_NAME")
+	//@Transient
 	private String userName;
+	
 	@Temporal(TemporalType.DATE)
 	private Date joinDate;
-	@Lob
+	
+	//@Lob
 	private String description;
 	
 	@Embedded
-	private Address address;
+	@AttributeOverrides({
+		@AttributeOverride(name="street", column=@Column(name="HOME_STREET_NAME")),
+		@AttributeOverride(name="city", column=@Column(name="HOME_CITY_NAME")),
+		@AttributeOverride(name="state", column=@Column(name="HOME_STATE_NAME")),
+		@AttributeOverride(name="pin", column=@Column(name="HOME_PIN_CODE")),
+		})
+	private Address homeAddress;
 	
-	@OneToOne
+	@Embedded
+	@AttributeOverrides({
+		@AttributeOverride(name="street", column=@Column(name="OFFICE_STREET_NAME")),
+		@AttributeOverride(name="city", column=@Column(name="OFFICE_CITY_NAME")),
+		@AttributeOverride(name="state", column=@Column(name="OFFICE_STATE_NAME")),
+		@AttributeOverride(name="pin", column=@Column(name="OFFICE_PIN_CODE")),
+		})
+	private Address officeAddress;
+	
+	/*@OneToOne
 	private Account account;
 	
 	@ElementCollection
-	private Set<Vehicle> listOfVehicles = new HashSet<Vehicle>();
+	private Set<Vehicle> listOfVehicles = new HashSet<Vehicle>();*/
 	
 	public int getUserId() {
 		return userId;
@@ -51,6 +74,7 @@ public class UserDetails {
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
+	
 	public String getUserName() {
 		return userName;
 	}
@@ -69,13 +93,20 @@ public class UserDetails {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Address getAddress() {
-		return address;
+	public Address getHomeAddress() {
+		return homeAddress;
 	}
-	public void setAddress(Address address) {
-		this.address = address;
+	public void setHomeAddress(Address homeAddress) {
+		this.homeAddress = homeAddress;
 	}
-	public Set<Vehicle> getListOfVehicles() {
+	public Address getOfficeAddress() {
+		return officeAddress;
+	}
+	public void setOfficeAddress(Address officeAddress) {
+		this.officeAddress = officeAddress;
+	}
+	
+	/*public Set<Vehicle> getListOfVehicles() {
 		return listOfVehicles;
 	}
 	public void setListOfVehicles(Set<Vehicle> listOfVehicles) {
@@ -86,6 +117,6 @@ public class UserDetails {
 	}
 	public void setAccount(Account account) {
 		this.account = account;
-	}
+	}*/
 	
 }
