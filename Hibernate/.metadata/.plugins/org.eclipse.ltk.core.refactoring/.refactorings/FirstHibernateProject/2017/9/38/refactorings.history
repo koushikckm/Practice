@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;org.koushik.hibernate.EmployeeDetailsTest&apos; to &apos;EmployeeCURDOperationTest&apos;&#x0A;- Original project: &apos;FirstHibernateProject&apos;&#x0A;- Original element: &apos;org.koushik.hibernate.EmployeeDetailsTest&apos;&#x0A;- Renamed element: &apos;org.koushik.hibernate.EmployeeCURDOperationTest&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;EmployeeDetailsTest&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;org.koushik.hibernate{EmployeeDetailsTest.java[EmployeeDetailsTest" matchStrategy="1" name="EmployeeCURDOperationTest" qualified="false" references="true" similarDeclarations="false" stamp="1505803806729" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,12 @@
+package org.koushik.hibernate;
+
+import org.koushik.hibernate.dto.EmployeeDetails;
+
+public class EmployeeDetailsTest {
+
+	public static void main(String[] args) {
+
+		EmployeeDetails employee = new EmployeeDetails();
+	}
+
+}

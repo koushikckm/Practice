@@ -1,0 +1,30 @@
+package org.koushik.hibernate;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+import org.koushik.hibernate.dto.EmployeeDetails;
+
+public class HibernateFeaturesTest {
+
+	public static void main(String[] args) {
+
+		EmployeeDetails employee = new EmployeeDetails();
+		employee.setEmployeeName("Koushik");
+		
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		
+		session.save(employee);
+		//This will still update the DB - will update until session is available
+		employee.setEmployeeName("Updated user after session.save");
+		
+		session.getTransaction().commit();
+		session.close();
+		
+		//This will not be reflected
+		employee.setEmployeeName("Updated user after session.close");
+	}
+
+}
