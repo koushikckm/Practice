@@ -1,5 +1,7 @@
 package org.koushik.hibernate;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 
 import org.hibernate.SessionFactory;
@@ -7,6 +9,9 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.classic.Session;
 import org.koushik.hibernate.dto.Account;
 import org.koushik.hibernate.dto.Address;
+import org.koushik.hibernate.dto.Book;
+import org.koushik.hibernate.dto.FourWheeler;
+import org.koushik.hibernate.dto.TwoWheeler;
 import org.koushik.hibernate.dto.UserDetails;
 import org.koushik.hibernate.dto.Vehicle;
 
@@ -14,12 +19,53 @@ public class HibernateTest {
 
 	public static void main(String[] args) {
 		UserDetails userDetails = new UserDetails();
-		userDetails.setUserId(1);
 		userDetails.setUserName("First user");
 		userDetails.setJoinDate(new Date());
 		userDetails.setDescription("Description is here....");
 	
-		Address homeAddr = new Address();
+		//One to one
+		Vehicle vehicle = new Vehicle();
+		vehicle.setVehicleName("Car");
+		
+		TwoWheeler bike = new TwoWheeler();
+		bike.setVehicleName("Bajaj");
+		bike.setSteeringHandle("2 wheeler handle");
+		
+		FourWheeler car = new FourWheeler();
+		car.setVehicleName("Porshe");
+		car.setSteeringWheel("4 wheeler stearing wheel");
+		
+		userDetails.setVehicle(vehicle);
+		
+		//One to many
+		Account account1 = new Account();
+		account1.setAccountName("koushik");
+		
+		Account account2 = new Account();
+		account2.setAccountName("koushik123");
+		
+		Account account3 = new Account();
+		account3.setAccountName("koushik345");
+		
+		userDetails.getAccount().add(account1);
+		userDetails.getAccount().add(account2);
+		userDetails.getAccount().add(account3);
+		
+		//Many to one
+		account1.setUser(userDetails);
+		account2.setUser(userDetails);
+		account3.setUser(userDetails);
+		
+		
+		Book book1 = new Book();
+		book1.setBookName("Java");
+		Book book2 = new Book();
+		book2.setBookName(". NET");
+		
+		userDetails.getBook().add(book1);
+		userDetails.getBook().add(book2);
+		
+		/*Address homeAddr = new Address();
 		homeAddr.setStreet("Home Street 111");
 		homeAddr.setCity("bangalore");
 		homeAddr.setState("KA");
@@ -35,24 +81,22 @@ public class HibernateTest {
 		
 		userDetails.setOfficeAddress(officeAddr);
 		
+		Address addr1 = new Address();
+		addr1.setStreet("1111");
+		addr1.setCity("ban");
+		addr1.setState("KA");
+		addr1.setPin("1111");
 		
-		/*Vehicle vehicle1 = new Vehicle();
-		vehicle1.setVin("1111");
-		vehicle1.setModel("aaaa");
+		Address addr2 = new Address();
+		addr2.setStreet("2222");
+		addr2.setCity("ckm");
+		addr2.setState("KA");
+		addr2.setPin("2222");
 		
-		Vehicle vehicle2 = new Vehicle();
-		vehicle2.setVin("22222");
-		vehicle2.setModel("sssss");
-		
-		userDetails.getListOfVehicles().add(vehicle1);
-		userDetails.getListOfVehicles().add(vehicle2);
+		userDetails.getListOfAddresses().add(addr1);
+		userDetails.getListOfAddresses().add(addr2);*/
 
 		
-		Account account = new Account();
-		account.setAccountId("111");
-		account.setAccountName("koushik");
-		
-		userDetails.setAccount(account);*/
 		
 		/*
 		 * 1. Create session factory
@@ -62,12 +106,25 @@ public class HibernateTest {
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
+		
 		session.save(userDetails);
-		//session.save(account);
+		
+		session.save(vehicle);
+		session.save(bike);
+		session.save(car);
+		
+		session.save(account1);
+		session.save(account2);
+		session.save(account3);
+		
+		//need not do session.save if mentioned as cascade instead need to give session.persist(user)
+		session.save(book1);
+		session.save(book2);
+		
 		session.getTransaction().commit();
 		session.close();
 		
-		userDetails = null;
+		/*userDetails = null;
 		
 		//Retrieving from db using hibernate
 		 
@@ -76,11 +133,12 @@ public class HibernateTest {
 		
 		//have to pass primary key as second argument for session.get
 		userDetails = (UserDetails) session.get(UserDetails.class, 1);
+		
 		System.out.println("User name : "+userDetails.getUserName()
 							+" Description : "+userDetails.getDescription());
 		
-		
-		
+		//Accessing the collection - list of addresses - proxy object gets called
+		System.out.println(userDetails.getListOfAddresses().size());*/
 		
 	}
 }
