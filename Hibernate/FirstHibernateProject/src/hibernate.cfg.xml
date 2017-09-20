@@ -20,9 +20,16 @@
         <!-- SQL dialect -->
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
-        <!-- Disable the second-level cache  -->
-        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <!-- Use Firt Level cache/ default cache  -->
+        <!-- <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property> -->
+        
+        <!-- Use second level cache  -->
+        <property name="cache.use_second_level_class">true</property>
+        <property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
 
+		<!-- Set query cache to true  -->
+		<property name="cache.use_query_cache">true</property>
+		
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
 

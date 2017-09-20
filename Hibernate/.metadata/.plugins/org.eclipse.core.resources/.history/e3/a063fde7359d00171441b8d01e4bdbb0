@@ -1,0 +1,10 @@
+package org.koushik.hibernate;
+
+public class QueryCacheDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

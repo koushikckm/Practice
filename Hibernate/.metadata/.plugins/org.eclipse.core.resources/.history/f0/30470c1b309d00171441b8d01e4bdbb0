@@ -1,0 +1,31 @@
+package org.koushik.hibernate;
+
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+import org.hibernate.criterion.Restrictions;
+import org.koushik.hibernate.dto.EmployeeDetails;
+
+public class FirstLevelCacheDemo {
+
+	public static void main(String[] args) {
+
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		
+		
+		
+		session.getTransaction().commit();
+		session.close();
+		
+		System.out.println("Result size = "+employees.size());
+		for(EmployeeDetails e : employees){
+			System.out.println(e.getEmployeeId() +": "+e.getEmployeeName());
+		}
+	}
+
+}

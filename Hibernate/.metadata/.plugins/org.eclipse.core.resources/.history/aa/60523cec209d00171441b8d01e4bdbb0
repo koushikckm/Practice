@@ -1,0 +1,34 @@
+package org.koushik.hibernate;
+
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+
+public class HQLDemo {
+
+	public static void main(String[] args) {
+		
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		
+		for (int i = 0; i < 10; i++) {
+			EmployeeDetails employee = new EmployeeDetails();
+			employee.setEmployeeName("Employee " + i);
+			session.save(employee);
+		}
+		
+		Query query = session.createQuery("from EmployeeDetails");
+		
+		List employees = query.list();
+		
+		session.getTransaction().commit();
+		session.close();
+		
+		System.out.println("Result size = "+employees.size());
+	}
+}

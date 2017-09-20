@@ -1,0 +1,43 @@
+package org.koushik.hibernate;
+
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Query;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Projection;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
+import org.koushik.hibernate.dto.EmployeeDetails;
+
+public class CriteriaApiDemo {
+	
+	public static void main(String[] args) {
+		
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		
+		Criteria criteria = session.createCriteria(EmployeeDetails.class);
+		criteria.add(Restrictions.like("employeeName","%Employee %"))
+				.add(Restrictions.gt("employeeId",3));
+		
+		//Using projections
+		/*Criteria criteria = session.createCriteria(EmployeeDetails.class)
+				.addOrder(Order.desc("employeeId"));*/
+				
+		List<EmployeeDetails> employees = (List<EmployeeDetails>)criteria.list();
+		
+		session.getTransaction().commit();
+		session.close();
+		
+		System.out.println("Result size = "+employees.size());
+		for(EmployeeDetails e : employees){
+			System.out.println(e.getEmployeeId() +": "+e.getEmployeeName());
+		}
+	}
+
+}

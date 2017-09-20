@@ -13,8 +13,9 @@ public class FindWordWithMaxOccurrance {
 	//Loop in the map to get max value and corrosponding key
 
 	public static void main(String[] args) {
-		String[] a = {"ccc","ccc","ccc","bbb","ddd","bbb",
-				"ccc","bbb","bbb","ccc","aaa","aaa"};
+		String str = "ccc ccc ccc bbb ddd bbb ccc bbb ccc aaa aaa";
+		String a[] = str.split(" ");
+		
 		
 		findMaxOccurrance(a);
 		
