@@ -1,0 +1,18 @@
+package org.koushik.practice.spring;
+
+import org.koushik.practice.spring.vehicles.Vehicle;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {
+	
+	public static void main(String[] args) {
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring-vehicle.xml");
+		//Vehicle vehicle = (Vehicle) context.getBean("twowheeler");
+		Vehicle vehicle = (Vehicle) context.getBean("fourwheeler");
+
+		vehicle.wheelsInfo();
+	}
+
+}

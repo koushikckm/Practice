@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	<bean id="square" class="org.koushik.practice.spring.Square">
+		<property name="side1" ref="side1"></property>
+		<property name="side2" ref="side2"></property>
+		<property name="side3" ref="side3"></property>
+		<property name="side4" ref="side4"></property>
+	</bean>
+	<bean id="side1" class="org.koushik.practice.spring.Side">
+		<property name="length" value="100"></property>
+	</bean>
+	<bean id="side2" class="org.koushik.practice.spring.Side">
+		<property name="length" value="100"></property>
+	</bean>
+	<bean id="side3" class="org.koushik.practice.spring.Side">
+		<property name="length" value="100"></property>
+	</bean>
+	<bean id="side4" class="org.koushik.practice.spring.Side">
+		<property name="length" value="100"></property>
+	</bean>
+	
+	
+	
+	<!-- Reading values from property files -->
+	<bean id="circle" class="org.koushik.practice.spring.Circle">
+		<property name="radius" value="1"></property>
+		<property name="diameter" value="2"></property>
+		<property name="circumference" value="3"></property>
+	</bean>
+	
+</beans>

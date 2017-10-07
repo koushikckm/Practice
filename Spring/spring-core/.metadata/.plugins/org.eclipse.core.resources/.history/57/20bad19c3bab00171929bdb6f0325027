@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- <bean id="triangle" class="org.koushik.practice.spring.Triangle">
+	
+		setter injection
+		<property name="type" value="Equilateral"></property>
+		
+		constructor injection
+		<constructor-arg type="java.lang.String" value="Equilateral"></constructor-arg>
+		<constructor-arg type="int" value="20"></constructor-arg>
+	</bean> -->
+	
+	<bean id="zeroPoint" class="org.koushik.practice.spring.Point">
+		<!-- Creates object of point class with value 0,0 -->
+		<property name="x" value="0"></property>
+		<property name="x" value="0"></property>
+	</bean>
+	<bean id="point2" class="org.koushik.practice.spring.Point">
+		<!-- Creates object of point class with value -20,0 -->
+		<property name="x" value="-20"></property>
+		<property name="x" value="0"></property>
+	</bean>
+	<bean id="point3" class="org.koushik.practice.spring.Point">
+		<!-- Creates object of point class with value 20,0 -->
+		<property name="x" value="20"></property>
+		<property name="x" value="0"></property>
+	</bean>
+</beans>

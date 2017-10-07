@@ -1,0 +1,60 @@
+package org.koushik.practice.spring.vehicles;
+
+public class FourWheeler implements Vehicle{
+
+	Wheel frontRightWheel;
+	Wheel frontLeftWheel;
+	Wheel rearRightWheel;
+	Wheel rearLeftWheel;
+
+	
+	public Wheel getFrontRightWheel() {
+		return frontRightWheel;
+	}
+
+
+	public void setFrontRightWheel(Wheel frontRightWheel) {
+		this.frontRightWheel = frontRightWheel;
+	}
+
+
+	public Wheel getFrontLeftWheel() {
+		return frontLeftWheel;
+	}
+
+
+	public void setFrontLeftWheel(Wheel frontLeftWheel) {
+		this.frontLeftWheel = frontLeftWheel;
+	}
+
+
+	public Wheel getRearRightWheel() {
+		return rearRightWheel;
+	}
+
+
+	public void setRearRightWheel(Wheel rearRightWheel) {
+		this.rearRightWheel = rearRightWheel;
+	}
+
+
+	public Wheel getRearLeftWheel() {
+		return rearLeftWheel;
+	}
+
+
+	public void setRearLeftWheel(Wheel rearLeftWheel) {
+		this.rearLeftWheel = rearLeftWheel;
+	}
+
+
+	@Override
+	public void wheelsInfo() {
+		System.out.println("Front right wheel info : width="+getFrontRightWheel().getWidth()+" length="+getFrontRightWheel().getLength());
+		System.out.println("Front left wheel info : width="+getFrontLeftWheel().getWidth()+" length="+getFrontLeftWheel().getLength());
+		System.out.println("Rear right wheel info : width="+getRearRightWheel().getWidth()+" length="+getRearRightWheel().getLength());
+		System.out.println("Rear left wheel info : width="+getRearLeftWheel().getWidth()+" length="+getRearLeftWheel().getLength());
+
+	}
+
+}

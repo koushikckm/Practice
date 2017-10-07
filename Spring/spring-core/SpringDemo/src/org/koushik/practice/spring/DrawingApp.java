@@ -3,6 +3,7 @@ package org.koushik.practice.spring;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.FileSystemResource;
 
@@ -17,11 +18,25 @@ public class DrawingApp {
 		
 		triangle.draw();*/
 		
-		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+		//ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+		context.registerShutdownHook();
 		
 		Triangle triangle = (Triangle)context.getBean("triangle");
-		
 		triangle.draw();
+		
+		
+		Square square = (Square)context.getBean("square");
+		//Square square = (Square)context.getBean("square1");
+		square.printSides();
+		
+		
+		Circle circle = (Circle)context.getBean("circle");
+		circle.circleProperties();
+		
+		Shape shape = (Shape)context.getBean("triangle");
+		//Shape shape = (Shape)context.getBean("circle");
+		shape.drawShape();
 	}
 
 }

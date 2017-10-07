@@ -1,12 +1,21 @@
 package org.koushik.practice.spring;
 
-public class Triangle {
+import java.util.List;
 
-	private String type;
+public class Triangle implements Shape{
+
+	//private String type;
 	
-	private int height;
+	//private int height;
 	
-	public Triangle(String type){
+	private Point pointA;
+	private Point pointB;
+	private Point pointC;
+	
+	private List<Point> points;
+	
+	
+	/*public Triangle(String type){
 		this.type = type;
 	}
 	
@@ -32,9 +41,72 @@ public class Triangle {
 		
 	public int getHeight() {
 		return height;
+	}*/
+
+	public List<Point> getPoints() {
+		return points;
 	}
 
+
+	public void setPoints(List<Point> points) {
+		this.points = points;
+	}
+
+
+	public Point getPointA() {
+		return pointA;
+	}
+
+
+	public void setPointA(Point pointA) {
+		this.pointA = pointA;
+	}
+
+
+	public Point getPointB() {
+		return pointB;
+	}
+
+
+	public void setPointB(Point pointB) {
+		this.pointB = pointB;
+	}
+
+
+	public Point getPointC() {
+		return pointC;
+	}
+
+
+	public void setPointC(Point pointC) {
+		this.pointC = pointC;
+	}
+
+
 	public void draw(){
-		System.out.println(getType() +" Triangle drawn of height "+getHeight());
+		//System.out.println(getType() +" Triangle drawn of height "+getHeight());
+		
+		System.out.println("Point A = ("+getPointA().getX()+","+getPointA().getY()+")");
+		System.out.println("Point B = ("+getPointB().getX()+","+getPointB().getY()+")");
+		System.out.println("Point C = ("+getPointC().getX()+","+getPointC().getY()+")");
+		
+		for(Point point : points){
+			System.out.println("Point = ("+point.getX()+","+point.getY()+")");
+		}
+	}
+	
+	public void initMethod(){
+		System.out.println("init method....");
+	}
+	
+	public void destroyMethod(){
+		System.out.println("destroy method....");
+	}
+
+
+	@Override
+	public void drawShape() {
+		// TODO Auto-generated method stub
+		System.out.println("Drawing triangle....");
 	}
 }

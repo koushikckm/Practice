@@ -1,0 +1,6 @@
+package org.koushik.practice.spring;
+
+public interface Shape {
+
+	public void drawShape();
+}

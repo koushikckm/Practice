@@ -1,0 +1,56 @@
+package org.koushik.practice.spring.vehicles;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import javax.annotation.Resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Required;
+import org.springframework.stereotype.Component;
+
+@Component(value="twowheeler")
+public class TwoWheeler implements Vehicle{
+
+	Wheel frontWheel;
+	Wheel rearWheel;
+	
+	public Wheel getFrontWheel() {
+		return frontWheel;
+	}
+
+	//@Required
+	//@Autowired
+	//@Qualifier("twoWheelerRelated")
+	@Resource(name="frontWheel")
+	public void setFrontWheel(Wheel frontWheel) {
+		this.frontWheel = frontWheel;
+	}
+	public Wheel getRearWheel() {
+		return rearWheel;
+	}
+	//@Required
+	//@Autowired
+	//@Qualifier("twoWheelerRelated")
+	@Resource(name="rearWheel")
+	public void setRearWheel(Wheel rearWheel) {
+		this.rearWheel = rearWheel;
+	}
+
+	@Override
+	public void wheelsInfo() {
+		// TODO Auto-generated method stub
+		System.out.println("Front wheel info : width="+getFrontWheel().getWidth()+" length="+getFrontWheel().getLength());
+		System.out.println("Rear wheel info : width="+getRearWheel().getWidth()+" length="+getRearWheel().getLength());
+	}
+
+	@PostConstruct
+	public void initOfTwoWheeler(){
+		System.out.println("init of two wheeler");
+	}
+	
+	@PreDestroy
+	public void destroyOfTwoWheeler(){
+		System.out.println("destroy of two wheeler");
+	}
+}

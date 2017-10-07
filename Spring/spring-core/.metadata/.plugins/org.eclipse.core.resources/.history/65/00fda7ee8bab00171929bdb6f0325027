@@ -1,0 +1,39 @@
+package org.koushik.practice.spring.vehicles;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Required;
+
+public class TwoWheeler implements Vehicle{
+
+	Wheel frontWheel;
+	Wheel rearWheel;
+	
+	public Wheel getFrontWheel() {
+		return frontWheel;
+	}
+
+	//@Required
+	@Autowired
+	@Qualifier("twoWheelerRelated")
+	public void setFrontWheel(Wheel frontWheel) {
+		this.frontWheel = frontWheel;
+	}
+	public Wheel getRearWheel() {
+		return rearWheel;
+	}
+	//@Required
+	@Autowired
+	@Qualifier("twoWheelerRelated")
+	public void setRearWheel(Wheel rearWheel) {
+		this.rearWheel = rearWheel;
+	}
+
+	@Override
+	public void wheelsInfo() {
+		// TODO Auto-generated method stub
+		System.out.println("Front wheel info : width="+getFrontWheel().getWidth()+" length="+getFrontWheel().getLength());
+		System.out.println("Rear wheel info : width="+getRearWheel().getWidth()+" length="+getRearWheel().getLength());
+	}
+
+}

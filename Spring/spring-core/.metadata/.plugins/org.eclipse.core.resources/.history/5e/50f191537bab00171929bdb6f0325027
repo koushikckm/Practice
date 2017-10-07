@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	<bean id="twowheeler" class="org.koushik.practice.spring.TwoWheeler">
+		<property name="wheel1" ref="frontWheel"></property>
+		<property name="wheel2" ref="rearWheel"></property>
+		
+	</bean>
+	<bean id="frontWheel" class="org.koushik.practice.spring.Wheel">
+		<property name="length" value="30"></property>
+		<property name="width" value="10"></property>
+	</bean>
+	<bean id="rearWheel" class="org.koushik.practice.spring.Wheel">
+		<property name="length" value="100"></property>
+	</bean>
+	
+	
+	
+</beans>

@@ -1,0 +1,9 @@
+package org.koushik.practice.spring;
+
+public class App {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

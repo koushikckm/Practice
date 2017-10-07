@@ -1,0 +1,35 @@
+package org.koushik.practice.spring;
+
+public class TwoWheeler implements Vehicle{
+
+	Wheel wheel1;
+	Wheel wheel2;
+	
+	
+	public Wheel getWheel1() {
+		return wheel1;
+	}
+
+
+	public void setWheel1(Wheel wheel1) {
+		this.wheel1 = wheel1;
+	}
+
+
+	public Wheel getWheel2() {
+		return wheel2;
+	}
+
+
+	public void setWheel2(Wheel wheel2) {
+		this.wheel2 = wheel2;
+	}
+
+
+	@Override
+	public void wheelsInfo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

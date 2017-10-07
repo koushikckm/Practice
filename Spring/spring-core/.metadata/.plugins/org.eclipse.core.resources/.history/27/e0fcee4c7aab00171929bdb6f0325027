@@ -1,0 +1,11 @@
+package org.koushik.practice.spring;
+
+public class TwoWheeler implements Vehicle{
+
+	@Override
+	public void wheelsInfo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

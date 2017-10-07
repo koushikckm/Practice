@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- <bean id="triangle" class="org.koushik.practice.spring.Triangle">
+	
+		setter injection
+		<property name="type" value="Equilateral"></property>
+		
+		constructor injection
+		<constructor-arg type="java.lang.String" value="Equilateral"></constructor-arg>
+		<constructor-arg type="int" value="20"></constructor-arg>
+	</bean> -->
+	
+	
+	<bean id="triangle" class="org.koushik.practice.spring.Triangle" init-method="initMethod" destroy-method="destroyMethod" >
+	
+	<!-- If the bean name is same as the menmer variable, we can ask spring to autowire
+	and the property configuration will not be required -->
+	<!-- <bean id="triangle" class="org.koushik.practice.spring.Triangle" autowire="byName"> -->
+		<property name="pointA" ref="pointA"></property>
+		<property name="pointB" ref="pointB"></property>
+		<property name="pointC" ref="pointC"></property>
+		
+		<!-- Instatiating collections(list) -->
+		<property name="points">
+			<list>
+				<ref bean="pointA"></ref>
+				<ref bean="pointB"></ref>
+				<ref bean="pointC"></ref>
+			</list>
+		</property>
+		
+		<!-- Instatiating using inner beans -->
+		<!-- <property name="pointA">
+			<bean class="org.koushik.practice.spring.Point">
+				<property name="x" value="0"></property>
+				<property name="y" value="0"></property>
+			</bean>
+		</property>
+		<property name="pointB">
+			<bean class="org.koushik.practice.spring.Point">
+				<property name="x" value="-20"></property>
+				<property name="y" value="0"></property>
+			</bean>
+		</property>
+		<property name="pointC">
+			<bean class="org.koushik.practice.spring.Point">
+				<property name="x" value="20"></property>
+				<property name="y" value="0"></property>
+			</bean>
+		</property> -->
+	</bean>
+	
+	<bean id="pointA" class="org.koushik.practice.spring.Point">
+		<!-- Creates object of point class with value 0,0  -->
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	<bean id="pointB" class="org.koushik.practice.spring.Point">
+		<!-- Creates object of point class with value -20,0  -->
+		<property name="x" value="-20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	<bean id="pointC" class="org.koushik.practice.spring.Point">
+		<!-- Creates object of point class with value 20,0  -->
+		<property name="x" value="20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	
+	
+	
+	
+	<bean id="square" class="org.koushik.practice.spring.Square">
+		<property name="side1" ref="side1"></property>
+		<property name="side2" ref="side2"></property>
+		<property name="side3" ref="side3"></property>
+		<property name="side4" ref="side4"></property>
+	</bean>
+	<bean id="side1" class="org.koushik.practice.spring.Side">
+		<property name="length" value="100"></property>
+	</bean>
+	<bean id="side2" class="org.koushik.practice.spring.Side">
+		<property name="length" value="100"></property>
+	</bean>
+	<bean id="side3" class="org.koushik.practice.spring.Side">
+		<property name="length" value="100"></property>
+	</bean>
+	<bean id="side4" class="org.koushik.practice.spring.Side">
+		<property name="length" value="100"></property>
+	</bean>
+	
+	
+	<!-- Bean definition inheritance -->
+	<!-- <bean id="parentsquare" class="org.koushik.practice.spring.Square">
+		<property name="side1" ref="side1"></property>
+	</bean>
+	
+	<bean id="square1" class="org.koushik.practice.spring.Square" parent="parentsquare">
+		<property name="side2" ref="side1"></property>
+		<property name="side3" ref="side2"></property>
+		<property name="side4" ref="side4"></property>
+	</bean> -->
+	
+	
+	<!-- Registering the post processor bean -->
+	<bean class="org.koushik.practice.spring.DisplayNameBeanPostProcessor">
+	</bean>
+	
+	<bean class="org.koushik.practice.spring.MyBeanFactoryPostProcesor">
+	</bean>
+	
+	
+	
+	<!-- Reading values from property files -->
+	<bean id="circle" class="org.koushik.practice.spring.Circle">
+		<property name="radius" value="${circle.radius}"></property>
+		<property name="diameter" value="${circle.diameter}"></property>
+		<property name="circumference" value="${circle.circumference}"></property>
+	</bean>
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="properties" value="circlepropertyconfig.properties"></property>
+	</bean>
+	
+</beans>
