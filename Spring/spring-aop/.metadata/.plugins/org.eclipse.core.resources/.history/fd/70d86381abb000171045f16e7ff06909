@@ -1,0 +1,24 @@
+package org.koushik.practice.aop.service;
+
+import org.koushik.practice.aop.model.Circle;
+import org.koushik.practice.aop.model.Triangle;
+
+public class ShapeService {
+
+	private Circle circle;
+	private Triangle triangel;
+	public Circle getCircle() {
+		return circle;
+	}
+	public void setCircle(Circle circle) {
+		this.circle = circle;
+	}
+	public Triangle getTriangel() {
+		return triangel;
+	}
+	public void setTriangel(Triangle triangel) {
+		this.triangel = triangel;
+	}
+	
+	
+}

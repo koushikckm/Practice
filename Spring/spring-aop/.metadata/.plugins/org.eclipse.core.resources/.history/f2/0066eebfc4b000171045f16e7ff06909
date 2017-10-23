@@ -1,0 +1,27 @@
+package org.koushik.practice.aop.aspect;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+
+@Aspect
+public class LoggingAspect {
+
+	@Before("execution(public String org.koushik.practice.aop.model.Circle.getName())")
+	public void LoggingAdvice(JoinPoint joinpoint){
+		System.out.println("Advice run. Get method called");
+		System.out.println(joinpoint.toString());
+		System.out.println(joinpoint.getTarget());
+	}
+	
+	@Before("args(name)")
+	public void stringArgumentMethods(String name){
+		
+		System.out.println("A method that takes string argument has been called. The value is "+name);
+		
+	}
+	
+	@Pointcut("execution(* get*())")
+	public void allGetters(){}
+}

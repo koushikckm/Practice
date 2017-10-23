@@ -1,0 +1,5 @@
+package org.koushik.practice.aop.service;
+
+public class ShapeService {
+
+}
