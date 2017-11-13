@@ -1,13 +1,16 @@
-package org.koushik.java8.lambda;
+package org.koushik.java8.lambda.functionalinterfaces;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
-public class Unit1Exercise {
+import org.koushik.java8.lambda.Person;
 
-	public static void main(String[] args) {
+public class UsingPredicateAndConsumer {
+
+public static void main(String[] args) {
 		
 		List<Person> people = Arrays.asList(
 				new Person("aaa","sss",12),
@@ -20,22 +23,7 @@ public class Unit1Exercise {
 		
 		
 		//Step 1 : sort list by last name
-		
-		
-		/*
-		 * Solution in Java 7 way
-		 */
-		
-		/*Collections.sort(people, new Comparator<Person>() {
-
-			@Override
-			public int compare(Person p1, Person p2) {
-
-				return p1.getLastName().compareTo(p2.getLastName());
-			}
-		});*/
-		
-		
+			
 		/*
 		 * Solution using Java 8 lambda
 		 */
@@ -48,27 +36,12 @@ public class Unit1Exercise {
 		
 		//Step 2 : Print all people
 	
-		printAll(people);
+		printAll(people, p -> true);
 		
 		/*    ****************************************************************************************************************************  */
 		
 		
 		//Step 3 : Print based on specific condition
-		
-		/*
-		 * Solution in Java 7 way
-		 */
-		
-		/*System.out.println("Printing all ppl with last name beginning with C");
-		printConditinally(people, new Condition() {
-			
-			@Override
-			public boolean test(Person p) {
-				
-				return p.getLastName().startsWith("C");
-			}
-		});*/
-		
 		
 		
 		/*
@@ -77,45 +50,30 @@ public class Unit1Exercise {
 		
 		System.out.println("Printing all ppl with last name beginning with C");
 		
-		printConditinally(people, (p) -> p.getLastName().startsWith("C"));
+		performConditinally(people, (p) -> p.getLastName().startsWith("C"), (p) -> System.out.println(p));
 		
-		
-		
-		/*System.out.println("Printing all ppl with first name beginning with C");
-		printConditinally(people, new Condition() {
-			
-			@Override
-			public boolean test(Person p) {
-				
-				return p.getFirstName().startsWith("C");
-			}
-		});*/
 		
 		System.out.println("Printing all ppl with first name beginning with C");
 		
-		printConditinally(people, (p) -> p.getFirstName().startsWith("C"));
+		performConditinally(people, (p) -> p.getFirstName().startsWith("C"), (p) -> System.out.println(p));
 		
 		/*    ****************************************************************************************************************************  */
 	}
 	
-	private static void printConditinally(List<Person> people, Condition condition) {
+	private static void performConditinally(List<Person> people, Predicate<Person> predicate, Consumer<Person> consumer) {
 		
 		for(Person p : people){
-			if(condition.test(p)){
-				System.out.println(p);
+			if(predicate.test(p)){
+				consumer.accept(p);
 			}
 		}
 		
 	}
 
-	private static void printAll(List<Person> people){
+	private static void printAll(List<Person> people, Predicate<Person> predicate){
 		
 		for(Person p : people){
 			System.out.println(p);
 		}
 	}
-}
-
-interface Condition {
-	boolean test(Person p);
 }
